@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'helpers/database_helper.dart';
 import 'screens/home.dart';
 import 'screens/report.dart';
@@ -8,7 +9,8 @@ import 'screens/filter_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await DatabaseHelper().database; // init DB on startup
+  await Firebase.initializeApp();          // ← เริ่ม Firebase
+  await DatabaseHelper().database;         // init DB on startup
   runApp(const MyApp());
 }
 

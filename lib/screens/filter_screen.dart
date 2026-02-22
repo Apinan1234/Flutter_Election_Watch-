@@ -87,7 +87,7 @@ class _FilterScreenState extends State<FilterScreen> {
                   prefixIcon: Icon(Icons.filter_list),
                   fillColor: Colors.white, filled: true,
                 ),
-                value: _severity,
+                value: _severity,  // ignore deprecated for now
                 items: const [
                   DropdownMenuItem(value: null,     child: Text('ทั้งหมด')),
                   DropdownMenuItem(value: 'High',   child: Text('High')),

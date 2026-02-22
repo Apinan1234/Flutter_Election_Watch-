@@ -1,0 +1,1201 @@
+<!DOCTYPE html><html><head>
+<title>รายงานส่งงาน_final66112772.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/*
+
+Arduino® Light Theme - Stefania Mellai <s.mellai@arduino.cc>
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #FFFFFF;
+}
+
+.hljs,
+.hljs-subst {
+  color: #434f54;
+}
+
+.hljs-keyword,
+.hljs-attribute,
+.hljs-selector-tag,
+.hljs-doctag,
+.hljs-name {
+  color: #00979D;
+}
+
+.hljs-built_in,
+.hljs-literal,
+.hljs-bullet,
+.hljs-code,
+.hljs-addition {
+  color: #D35400;
+}
+
+.hljs-regexp,
+.hljs-symbol,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-link,
+.hljs-selector-attr,
+.hljs-selector-pseudo {
+  color: #00979D;
+}
+
+.hljs-type,
+.hljs-string,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-quote,
+.hljs-template-tag,
+.hljs-deletion {
+  color: #005C5F;
+}
+
+.hljs-title,
+.hljs-section {
+  color: #880000;
+  font-weight: bold;
+}
+
+.hljs-comment {
+  color: rgba(149,165,166,.8);
+}
+
+.hljs-meta-keyword {
+  color: #728E00;
+}
+
+.hljs-meta {
+  color: #434f54;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-function {
+  color: #728E00;
+}
+
+.hljs-number {
+  color: #8A7B52;  
+}
+
+</style>
+
+<style>
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family:   "HelveticaNeue-Light", sans-serif, "宋体","Segoe WPC", "Segoe UI", "SFUIText-Light","Droid Sans Fallback";
+	font-size: 18px;
+	padding: 0 12px;
+	line-height: 1.6;
+	word-wrap: break-word;
+	color: #333333;
+}
+
+.content-wrapper{
+	max-width: 860px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	color: #4080D0;
+	text-decoration: none;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom: 1px solid #eee;
+}
+
+
+h2{
+	padding-bottom: .3em;
+    font-size: 2em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+h3{
+	font-size: 1.75em;
+    line-height: 1.225;
+}
+
+h1, h2, h3 {
+	font-weight: bold;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+	font-size: inherit;
+	line-height: auto;
+}
+
+a:hover {
+	color: #4080D0;
+	text-decoration: underline;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left: 5px solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 14px;
+	line-height: 19px;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+.mac code {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+/** Theming */
+
+.vscode-light,
+.vscode-light pre code {
+	color: rgb(30, 30, 30);
+}
+
+.vscode-dark,
+.vscode-dark pre code {
+	color: #DDD;
+}
+
+.vscode-high-contrast,
+.vscode-high-contrast pre code {
+	color: white;
+}
+
+.vscode-light code {
+	color: #A31515;
+}
+
+.vscode-dark code {
+	color: #D7BA7D;
+}
+
+.vscode-light pre:not(.hljs),
+.vscode-light code > div {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre:not(.hljs),
+.vscode-dark code > div {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre:not(.hljs),
+.vscode-high-contrast code > div {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+.vscode-light blockquote,
+.vscode-dark blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.vscode-high-contrast blockquote {
+	background: transparent;
+	border-color: #fff;
+}
+</style>
+
+<style>
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+.table-of-contents li{
+	list-style-type: initial;
+}
+</style>
+
+<style>
+@font-face{font-family:KaTeX_AMS;font-style:normal;font-weight:400;src:url(fonts/KaTeX_AMS-Regular.woff2) format("woff2"),url(fonts/KaTeX_AMS-Regular.woff) format("woff"),url(fonts/KaTeX_AMS-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Caligraphic;font-style:normal;font-weight:700;src:url(fonts/KaTeX_Caligraphic-Bold.woff2) format("woff2"),url(fonts/KaTeX_Caligraphic-Bold.woff) format("woff"),url(fonts/KaTeX_Caligraphic-Bold.ttf) format("truetype")}@font-face{font-family:KaTeX_Caligraphic;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Caligraphic-Regular.woff2) format("woff2"),url(fonts/KaTeX_Caligraphic-Regular.woff) format("woff"),url(fonts/KaTeX_Caligraphic-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Fraktur;font-style:normal;font-weight:700;src:url(fonts/KaTeX_Fraktur-Bold.woff2) format("woff2"),url(fonts/KaTeX_Fraktur-Bold.woff) format("woff"),url(fonts/KaTeX_Fraktur-Bold.ttf) format("truetype")}@font-face{font-family:KaTeX_Fraktur;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Fraktur-Regular.woff2) format("woff2"),url(fonts/KaTeX_Fraktur-Regular.woff) format("woff"),url(fonts/KaTeX_Fraktur-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Main;font-style:normal;font-weight:700;src:url(fonts/KaTeX_Main-Bold.woff2) format("woff2"),url(fonts/KaTeX_Main-Bold.woff) format("woff"),url(fonts/KaTeX_Main-Bold.ttf) format("truetype")}@font-face{font-family:KaTeX_Main;font-style:italic;font-weight:700;src:url(fonts/KaTeX_Main-BoldItalic.woff2) format("woff2"),url(fonts/KaTeX_Main-BoldItalic.woff) format("woff"),url(fonts/KaTeX_Main-BoldItalic.ttf) format("truetype")}@font-face{font-family:KaTeX_Main;font-style:italic;font-weight:400;src:url(fonts/KaTeX_Main-Italic.woff2) format("woff2"),url(fonts/KaTeX_Main-Italic.woff) format("woff"),url(fonts/KaTeX_Main-Italic.ttf) format("truetype")}@font-face{font-family:KaTeX_Main;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Main-Regular.woff2) format("woff2"),url(fonts/KaTeX_Main-Regular.woff) format("woff"),url(fonts/KaTeX_Main-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Math;font-style:italic;font-weight:700;src:url(fonts/KaTeX_Math-BoldItalic.woff2) format("woff2"),url(fonts/KaTeX_Math-BoldItalic.woff) format("woff"),url(fonts/KaTeX_Math-BoldItalic.ttf) format("truetype")}@font-face{font-family:KaTeX_Math;font-style:italic;font-weight:400;src:url(fonts/KaTeX_Math-Italic.woff2) format("woff2"),url(fonts/KaTeX_Math-Italic.woff) format("woff"),url(fonts/KaTeX_Math-Italic.ttf) format("truetype")}@font-face{font-family:"KaTeX_SansSerif";font-style:normal;font-weight:700;src:url(fonts/KaTeX_SansSerif-Bold.woff2) format("woff2"),url(fonts/KaTeX_SansSerif-Bold.woff) format("woff"),url(fonts/KaTeX_SansSerif-Bold.ttf) format("truetype")}@font-face{font-family:"KaTeX_SansSerif";font-style:italic;font-weight:400;src:url(fonts/KaTeX_SansSerif-Italic.woff2) format("woff2"),url(fonts/KaTeX_SansSerif-Italic.woff) format("woff"),url(fonts/KaTeX_SansSerif-Italic.ttf) format("truetype")}@font-face{font-family:"KaTeX_SansSerif";font-style:normal;font-weight:400;src:url(fonts/KaTeX_SansSerif-Regular.woff2) format("woff2"),url(fonts/KaTeX_SansSerif-Regular.woff) format("woff"),url(fonts/KaTeX_SansSerif-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Script;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Script-Regular.woff2) format("woff2"),url(fonts/KaTeX_Script-Regular.woff) format("woff"),url(fonts/KaTeX_Script-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Size1;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Size1-Regular.woff2) format("woff2"),url(fonts/KaTeX_Size1-Regular.woff) format("woff"),url(fonts/KaTeX_Size1-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Size2;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Size2-Regular.woff2) format("woff2"),url(fonts/KaTeX_Size2-Regular.woff) format("woff"),url(fonts/KaTeX_Size2-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Size3;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Size3-Regular.woff2) format("woff2"),url(fonts/KaTeX_Size3-Regular.woff) format("woff"),url(fonts/KaTeX_Size3-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Size4;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Size4-Regular.woff2) format("woff2"),url(fonts/KaTeX_Size4-Regular.woff) format("woff"),url(fonts/KaTeX_Size4-Regular.ttf) format("truetype")}@font-face{font-family:KaTeX_Typewriter;font-style:normal;font-weight:400;src:url(fonts/KaTeX_Typewriter-Regular.woff2) format("woff2"),url(fonts/KaTeX_Typewriter-Regular.woff) format("woff"),url(fonts/KaTeX_Typewriter-Regular.ttf) format("truetype")}.katex{text-rendering:auto;font:normal 1.21em KaTeX_Main,Times New Roman,serif;line-height:1.2;text-indent:0}.katex *{-ms-high-contrast-adjust:none!important;border-color:currentColor}.katex .katex-version:after{content:"0.16.2"}.katex .katex-mathml{clip:rect(1px,1px,1px,1px);border:0;height:1px;overflow:hidden;padding:0;position:absolute;width:1px}.katex .katex-html>.newline{display:block}.katex .base{position:relative;white-space:nowrap;width:-webkit-min-content;width:-moz-min-content;width:min-content}.katex .base,.katex .strut{display:inline-block}.katex .textbf{font-weight:700}.katex .textit{font-style:italic}.katex .textrm{font-family:KaTeX_Main}.katex .textsf{font-family:KaTeX_SansSerif}.katex .texttt{font-family:KaTeX_Typewriter}.katex .mathnormal{font-family:KaTeX_Math;font-style:italic}.katex .mathit{font-family:KaTeX_Main;font-style:italic}.katex .mathrm{font-style:normal}.katex .mathbf{font-family:KaTeX_Main;font-weight:700}.katex .boldsymbol{font-family:KaTeX_Math;font-style:italic;font-weight:700}.katex .amsrm,.katex .mathbb,.katex .textbb{font-family:KaTeX_AMS}.katex .mathcal{font-family:KaTeX_Caligraphic}.katex .mathfrak,.katex .textfrak{font-family:KaTeX_Fraktur}.katex .mathtt{font-family:KaTeX_Typewriter}.katex .mathscr,.katex .textscr{font-family:KaTeX_Script}.katex .mathsf,.katex .textsf{font-family:KaTeX_SansSerif}.katex .mathboldsf,.katex .textboldsf{font-family:KaTeX_SansSerif;font-weight:700}.katex .mathitsf,.katex .textitsf{font-family:KaTeX_SansSerif;font-style:italic}.katex .mainrm{font-family:KaTeX_Main;font-style:normal}.katex .vlist-t{border-collapse:collapse;display:inline-table;table-layout:fixed}.katex .vlist-r{display:table-row}.katex .vlist{display:table-cell;position:relative;vertical-align:bottom}.katex .vlist>span{display:block;height:0;position:relative}.katex .vlist>span>span{display:inline-block}.katex .vlist>span>.pstrut{overflow:hidden;width:0}.katex .vlist-t2{margin-right:-2px}.katex .vlist-s{display:table-cell;font-size:1px;min-width:2px;vertical-align:bottom;width:2px}.katex .vbox{align-items:baseline;display:inline-flex;flex-direction:column}.katex .hbox{width:100%}.katex .hbox,.katex .thinbox{display:inline-flex;flex-direction:row}.katex .thinbox{max-width:0;width:0}.katex .msupsub{text-align:left}.katex .mfrac>span>span{text-align:center}.katex .mfrac .frac-line{border-bottom-style:solid;display:inline-block;width:100%}.katex .hdashline,.katex .hline,.katex .mfrac .frac-line,.katex .overline .overline-line,.katex .rule,.katex .underline .underline-line{min-height:1px}.katex .mspace{display:inline-block}.katex .clap,.katex .llap,.katex .rlap{position:relative;width:0}.katex .clap>.inner,.katex .llap>.inner,.katex .rlap>.inner{position:absolute}.katex .clap>.fix,.katex .llap>.fix,.katex .rlap>.fix{display:inline-block}.katex .llap>.inner{right:0}.katex .clap>.inner,.katex .rlap>.inner{left:0}.katex .clap>.inner>span{margin-left:-50%;margin-right:50%}.katex .rule{border:0 solid;display:inline-block;position:relative}.katex .hline,.katex .overline .overline-line,.katex .underline .underline-line{border-bottom-style:solid;display:inline-block;width:100%}.katex .hdashline{border-bottom-style:dashed;display:inline-block;width:100%}.katex .sqrt>.root{margin-left:.27777778em;margin-right:-.55555556em}.katex .fontsize-ensurer.reset-size1.size1,.katex .sizing.reset-size1.size1{font-size:1em}.katex .fontsize-ensurer.reset-size1.size2,.katex .sizing.reset-size1.size2{font-size:1.2em}.katex .fontsize-ensurer.reset-size1.size3,.katex .sizing.reset-size1.size3{font-size:1.4em}.katex .fontsize-ensurer.reset-size1.size4,.katex .sizing.reset-size1.size4{font-size:1.6em}.katex .fontsize-ensurer.reset-size1.size5,.katex .sizing.reset-size1.size5{font-size:1.8em}.katex .fontsize-ensurer.reset-size1.size6,.katex .sizing.reset-size1.size6{font-size:2em}.katex .fontsize-ensurer.reset-size1.size7,.katex .sizing.reset-size1.size7{font-size:2.4em}.katex .fontsize-ensurer.reset-size1.size8,.katex .sizing.reset-size1.size8{font-size:2.88em}.katex .fontsize-ensurer.reset-size1.size9,.katex .sizing.reset-size1.size9{font-size:3.456em}.katex .fontsize-ensurer.reset-size1.size10,.katex .sizing.reset-size1.size10{font-size:4.148em}.katex .fontsize-ensurer.reset-size1.size11,.katex .sizing.reset-size1.size11{font-size:4.976em}.katex .fontsize-ensurer.reset-size2.size1,.katex .sizing.reset-size2.size1{font-size:.83333333em}.katex .fontsize-ensurer.reset-size2.size2,.katex .sizing.reset-size2.size2{font-size:1em}.katex .fontsize-ensurer.reset-size2.size3,.katex .sizing.reset-size2.size3{font-size:1.16666667em}.katex .fontsize-ensurer.reset-size2.size4,.katex .sizing.reset-size2.size4{font-size:1.33333333em}.katex .fontsize-ensurer.reset-size2.size5,.katex .sizing.reset-size2.size5{font-size:1.5em}.katex .fontsize-ensurer.reset-size2.size6,.katex .sizing.reset-size2.size6{font-size:1.66666667em}.katex .fontsize-ensurer.reset-size2.size7,.katex .sizing.reset-size2.size7{font-size:2em}.katex .fontsize-ensurer.reset-size2.size8,.katex .sizing.reset-size2.size8{font-size:2.4em}.katex .fontsize-ensurer.reset-size2.size9,.katex .sizing.reset-size2.size9{font-size:2.88em}.katex .fontsize-ensurer.reset-size2.size10,.katex .sizing.reset-size2.size10{font-size:3.45666667em}.katex .fontsize-ensurer.reset-size2.size11,.katex .sizing.reset-size2.size11{font-size:4.14666667em}.katex .fontsize-ensurer.reset-size3.size1,.katex .sizing.reset-size3.size1{font-size:.71428571em}.katex .fontsize-ensurer.reset-size3.size2,.katex .sizing.reset-size3.size2{font-size:.85714286em}.katex .fontsize-ensurer.reset-size3.size3,.katex .sizing.reset-size3.size3{font-size:1em}.katex .fontsize-ensurer.reset-size3.size4,.katex .sizing.reset-size3.size4{font-size:1.14285714em}.katex .fontsize-ensurer.reset-size3.size5,.katex .sizing.reset-size3.size5{font-size:1.28571429em}.katex .fontsize-ensurer.reset-size3.size6,.katex .sizing.reset-size3.size6{font-size:1.42857143em}.katex .fontsize-ensurer.reset-size3.size7,.katex .sizing.reset-size3.size7{font-size:1.71428571em}.katex .fontsize-ensurer.reset-size3.size8,.katex .sizing.reset-size3.size8{font-size:2.05714286em}.katex .fontsize-ensurer.reset-size3.size9,.katex .sizing.reset-size3.size9{font-size:2.46857143em}.katex .fontsize-ensurer.reset-size3.size10,.katex .sizing.reset-size3.size10{font-size:2.96285714em}.katex .fontsize-ensurer.reset-size3.size11,.katex .sizing.reset-size3.size11{font-size:3.55428571em}.katex .fontsize-ensurer.reset-size4.size1,.katex .sizing.reset-size4.size1{font-size:.625em}.katex .fontsize-ensurer.reset-size4.size2,.katex .sizing.reset-size4.size2{font-size:.75em}.katex .fontsize-ensurer.reset-size4.size3,.katex .sizing.reset-size4.size3{font-size:.875em}.katex .fontsize-ensurer.reset-size4.size4,.katex .sizing.reset-size4.size4{font-size:1em}.katex .fontsize-ensurer.reset-size4.size5,.katex .sizing.reset-size4.size5{font-size:1.125em}.katex .fontsize-ensurer.reset-size4.size6,.katex .sizing.reset-size4.size6{font-size:1.25em}.katex .fontsize-ensurer.reset-size4.size7,.katex .sizing.reset-size4.size7{font-size:1.5em}.katex .fontsize-ensurer.reset-size4.size8,.katex .sizing.reset-size4.size8{font-size:1.8em}.katex .fontsize-ensurer.reset-size4.size9,.katex .sizing.reset-size4.size9{font-size:2.16em}.katex .fontsize-ensurer.reset-size4.size10,.katex .sizing.reset-size4.size10{font-size:2.5925em}.katex .fontsize-ensurer.reset-size4.size11,.katex .sizing.reset-size4.size11{font-size:3.11em}.katex .fontsize-ensurer.reset-size5.size1,.katex .sizing.reset-size5.size1{font-size:.55555556em}.katex .fontsize-ensurer.reset-size5.size2,.katex .sizing.reset-size5.size2{font-size:.66666667em}.katex .fontsize-ensurer.reset-size5.size3,.katex .sizing.reset-size5.size3{font-size:.77777778em}.katex .fontsize-ensurer.reset-size5.size4,.katex .sizing.reset-size5.size4{font-size:.88888889em}.katex .fontsize-ensurer.reset-size5.size5,.katex .sizing.reset-size5.size5{font-size:1em}.katex .fontsize-ensurer.reset-size5.size6,.katex .sizing.reset-size5.size6{font-size:1.11111111em}.katex .fontsize-ensurer.reset-size5.size7,.katex .sizing.reset-size5.size7{font-size:1.33333333em}.katex .fontsize-ensurer.reset-size5.size8,.katex .sizing.reset-size5.size8{font-size:1.6em}.katex .fontsize-ensurer.reset-size5.size9,.katex .sizing.reset-size5.size9{font-size:1.92em}.katex .fontsize-ensurer.reset-size5.size10,.katex .sizing.reset-size5.size10{font-size:2.30444444em}.katex .fontsize-ensurer.reset-size5.size11,.katex .sizing.reset-size5.size11{font-size:2.76444444em}.katex .fontsize-ensurer.reset-size6.size1,.katex .sizing.reset-size6.size1{font-size:.5em}.katex .fontsize-ensurer.reset-size6.size2,.katex .sizing.reset-size6.size2{font-size:.6em}.katex .fontsize-ensurer.reset-size6.size3,.katex .sizing.reset-size6.size3{font-size:.7em}.katex .fontsize-ensurer.reset-size6.size4,.katex .sizing.reset-size6.size4{font-size:.8em}.katex .fontsize-ensurer.reset-size6.size5,.katex .sizing.reset-size6.size5{font-size:.9em}.katex .fontsize-ensurer.reset-size6.size6,.katex .sizing.reset-size6.size6{font-size:1em}.katex .fontsize-ensurer.reset-size6.size7,.katex .sizing.reset-size6.size7{font-size:1.2em}.katex .fontsize-ensurer.reset-size6.size8,.katex .sizing.reset-size6.size8{font-size:1.44em}.katex .fontsize-ensurer.reset-size6.size9,.katex .sizing.reset-size6.size9{font-size:1.728em}.katex .fontsize-ensurer.reset-size6.size10,.katex .sizing.reset-size6.size10{font-size:2.074em}.katex .fontsize-ensurer.reset-size6.size11,.katex .sizing.reset-size6.size11{font-size:2.488em}.katex .fontsize-ensurer.reset-size7.size1,.katex .sizing.reset-size7.size1{font-size:.41666667em}.katex .fontsize-ensurer.reset-size7.size2,.katex .sizing.reset-size7.size2{font-size:.5em}.katex .fontsize-ensurer.reset-size7.size3,.katex .sizing.reset-size7.size3{font-size:.58333333em}.katex .fontsize-ensurer.reset-size7.size4,.katex .sizing.reset-size7.size4{font-size:.66666667em}.katex .fontsize-ensurer.reset-size7.size5,.katex .sizing.reset-size7.size5{font-size:.75em}.katex .fontsize-ensurer.reset-size7.size6,.katex .sizing.reset-size7.size6{font-size:.83333333em}.katex .fontsize-ensurer.reset-size7.size7,.katex .sizing.reset-size7.size7{font-size:1em}.katex .fontsize-ensurer.reset-size7.size8,.katex .sizing.reset-size7.size8{font-size:1.2em}.katex .fontsize-ensurer.reset-size7.size9,.katex .sizing.reset-size7.size9{font-size:1.44em}.katex .fontsize-ensurer.reset-size7.size10,.katex .sizing.reset-size7.size10{font-size:1.72833333em}.katex .fontsize-ensurer.reset-size7.size11,.katex .sizing.reset-size7.size11{font-size:2.07333333em}.katex .fontsize-ensurer.reset-size8.size1,.katex .sizing.reset-size8.size1{font-size:.34722222em}.katex .fontsize-ensurer.reset-size8.size2,.katex .sizing.reset-size8.size2{font-size:.41666667em}.katex .fontsize-ensurer.reset-size8.size3,.katex .sizing.reset-size8.size3{font-size:.48611111em}.katex .fontsize-ensurer.reset-size8.size4,.katex .sizing.reset-size8.size4{font-size:.55555556em}.katex .fontsize-ensurer.reset-size8.size5,.katex .sizing.reset-size8.size5{font-size:.625em}.katex .fontsize-ensurer.reset-size8.size6,.katex .sizing.reset-size8.size6{font-size:.69444444em}.katex .fontsize-ensurer.reset-size8.size7,.katex .sizing.reset-size8.size7{font-size:.83333333em}.katex .fontsize-ensurer.reset-size8.size8,.katex .sizing.reset-size8.size8{font-size:1em}.katex .fontsize-ensurer.reset-size8.size9,.katex .sizing.reset-size8.size9{font-size:1.2em}.katex .fontsize-ensurer.reset-size8.size10,.katex .sizing.reset-size8.size10{font-size:1.44027778em}.katex .fontsize-ensurer.reset-size8.size11,.katex .sizing.reset-size8.size11{font-size:1.72777778em}.katex .fontsize-ensurer.reset-size9.size1,.katex .sizing.reset-size9.size1{font-size:.28935185em}.katex .fontsize-ensurer.reset-size9.size2,.katex .sizing.reset-size9.size2{font-size:.34722222em}.katex .fontsize-ensurer.reset-size9.size3,.katex .sizing.reset-size9.size3{font-size:.40509259em}.katex .fontsize-ensurer.reset-size9.size4,.katex .sizing.reset-size9.size4{font-size:.46296296em}.katex .fontsize-ensurer.reset-size9.size5,.katex .sizing.reset-size9.size5{font-size:.52083333em}.katex .fontsize-ensurer.reset-size9.size6,.katex .sizing.reset-size9.size6{font-size:.5787037em}.katex .fontsize-ensurer.reset-size9.size7,.katex .sizing.reset-size9.size7{font-size:.69444444em}.katex .fontsize-ensurer.reset-size9.size8,.katex .sizing.reset-size9.size8{font-size:.83333333em}.katex .fontsize-ensurer.reset-size9.size9,.katex .sizing.reset-size9.size9{font-size:1em}.katex .fontsize-ensurer.reset-size9.size10,.katex .sizing.reset-size9.size10{font-size:1.20023148em}.katex .fontsize-ensurer.reset-size9.size11,.katex .sizing.reset-size9.size11{font-size:1.43981481em}.katex .fontsize-ensurer.reset-size10.size1,.katex .sizing.reset-size10.size1{font-size:.24108004em}.katex .fontsize-ensurer.reset-size10.size2,.katex .sizing.reset-size10.size2{font-size:.28929605em}.katex .fontsize-ensurer.reset-size10.size3,.katex .sizing.reset-size10.size3{font-size:.33751205em}.katex .fontsize-ensurer.reset-size10.size4,.katex .sizing.reset-size10.size4{font-size:.38572806em}.katex .fontsize-ensurer.reset-size10.size5,.katex .sizing.reset-size10.size5{font-size:.43394407em}.katex .fontsize-ensurer.reset-size10.size6,.katex .sizing.reset-size10.size6{font-size:.48216008em}.katex .fontsize-ensurer.reset-size10.size7,.katex .sizing.reset-size10.size7{font-size:.57859209em}.katex .fontsize-ensurer.reset-size10.size8,.katex .sizing.reset-size10.size8{font-size:.69431051em}.katex .fontsize-ensurer.reset-size10.size9,.katex .sizing.reset-size10.size9{font-size:.83317261em}.katex .fontsize-ensurer.reset-size10.size10,.katex .sizing.reset-size10.size10{font-size:1em}.katex .fontsize-ensurer.reset-size10.size11,.katex .sizing.reset-size10.size11{font-size:1.19961427em}.katex .fontsize-ensurer.reset-size11.size1,.katex .sizing.reset-size11.size1{font-size:.20096463em}.katex .fontsize-ensurer.reset-size11.size2,.katex .sizing.reset-size11.size2{font-size:.24115756em}.katex .fontsize-ensurer.reset-size11.size3,.katex .sizing.reset-size11.size3{font-size:.28135048em}.katex .fontsize-ensurer.reset-size11.size4,.katex .sizing.reset-size11.size4{font-size:.32154341em}.katex .fontsize-ensurer.reset-size11.size5,.katex .sizing.reset-size11.size5{font-size:.36173633em}.katex .fontsize-ensurer.reset-size11.size6,.katex .sizing.reset-size11.size6{font-size:.40192926em}.katex .fontsize-ensurer.reset-size11.size7,.katex .sizing.reset-size11.size7{font-size:.48231511em}.katex .fontsize-ensurer.reset-size11.size8,.katex .sizing.reset-size11.size8{font-size:.57877814em}.katex .fontsize-ensurer.reset-size11.size9,.katex .sizing.reset-size11.size9{font-size:.69453376em}.katex .fontsize-ensurer.reset-size11.size10,.katex .sizing.reset-size11.size10{font-size:.83360129em}.katex .fontsize-ensurer.reset-size11.size11,.katex .sizing.reset-size11.size11{font-size:1em}.katex .delimsizing.size1{font-family:KaTeX_Size1}.katex .delimsizing.size2{font-family:KaTeX_Size2}.katex .delimsizing.size3{font-family:KaTeX_Size3}.katex .delimsizing.size4{font-family:KaTeX_Size4}.katex .delimsizing.mult .delim-size1>span{font-family:KaTeX_Size1}.katex .delimsizing.mult .delim-size4>span{font-family:KaTeX_Size4}.katex .nulldelimiter{display:inline-block;width:.12em}.katex .delimcenter,.katex .op-symbol{position:relative}.katex .op-symbol.small-op{font-family:KaTeX_Size1}.katex .op-symbol.large-op{font-family:KaTeX_Size2}.katex .accent>.vlist-t,.katex .op-limits>.vlist-t{text-align:center}.katex .accent .accent-body{position:relative}.katex .accent .accent-body:not(.accent-full){width:0}.katex .overlay{display:block}.katex .mtable .vertical-separator{display:inline-block;min-width:1px}.katex .mtable .arraycolsep{display:inline-block}.katex .mtable .col-align-c>.vlist-t{text-align:center}.katex .mtable .col-align-l>.vlist-t{text-align:left}.katex .mtable .col-align-r>.vlist-t{text-align:right}.katex .svg-align{text-align:left}.katex svg{fill:currentColor;stroke:currentColor;fill-rule:nonzero;fill-opacity:1;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;display:block;height:inherit;position:absolute;width:100%}.katex svg path{stroke:none}.katex img{border-style:none;max-height:none;max-width:none;min-height:0;min-width:0}.katex .stretchy{display:block;overflow:hidden;position:relative;width:100%}.katex .stretchy:after,.katex .stretchy:before{content:""}.katex .hide-tail{overflow:hidden;position:relative;width:100%}.katex .halfarrow-left{left:0;overflow:hidden;position:absolute;width:50.2%}.katex .halfarrow-right{overflow:hidden;position:absolute;right:0;width:50.2%}.katex .brace-left{left:0;overflow:hidden;position:absolute;width:25.1%}.katex .brace-center{left:25%;overflow:hidden;position:absolute;width:50%}.katex .brace-right{overflow:hidden;position:absolute;right:0;width:25.1%}.katex .x-arrow-pad{padding:0 .5em}.katex .cd-arrow-pad{padding:0 .55556em 0 .27778em}.katex .mover,.katex .munder,.katex .x-arrow{text-align:center}.katex .boxpad{padding:0 .3em}.katex .fbox,.katex .fcolorbox{border:.04em solid;box-sizing:border-box}.katex .cancel-pad{padding:0 .2em}.katex .cancel-lap{margin-left:-.2em;margin-right:-.2em}.katex .sout{border-bottom-style:solid;border-bottom-width:.08em}.katex .angl{border-right:.049em solid;border-top:.049em solid;box-sizing:border-box;margin-right:.03889em}.katex .anglpad{padding:0 .03889em}.katex .eqn-num:before{content:"(" counter(katexEqnNo) ")";counter-increment:katexEqnNo}.katex .mml-eqn-num:before{content:"(" counter(mmlEqnNo) ")";counter-increment:mmlEqnNo}.katex .mtr-glue{width:50%}.katex .cd-vert-arrow{display:inline-block;position:relative}.katex .cd-label-left{display:inline-block;position:absolute;right:calc(50% + .3em);text-align:left}.katex .cd-label-right{display:inline-block;left:calc(50% + .3em);position:absolute;text-align:right}.katex-display{display:block;margin:1em 0;text-align:center}.katex-display>.katex{display:block;text-align:center;white-space:nowrap}.katex-display>.katex>.katex-html{display:block;position:relative}.katex-display>.katex>.katex-html>.tag{position:absolute;right:0}.katex-display.leqno>.katex>.katex-html>.tag{left:0;right:auto}.katex-display.fleqn>.katex{padding-left:2em;text-align:left}body{counter-reset:katexEqnNo mmlEqnNo}
+
+</style>
+
+</head>
+<body>
+    <div class="content-wrapper">
+        <h1 id="%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%AA%E0%B9%88%E0%B8%87%E0%B8%87%E0%B8%B2%E0%B8%99-%E2%80%94-election-watch" tabindex="-1">รายงานการส่งงาน — Election Watch</h1>
+<h2 id="%E0%B8%8A%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B9%82%E0%B8%9B%E0%B8%A3%E0%B9%80%E0%B8%88%E0%B8%81%E0%B8%95%E0%B9%8C%3A-final66112772" tabindex="-1">ชื่อโปรเจกต์: <code>final66112772</code></h2>
+<h2 id="%E0%B8%A3%E0%B8%AB%E0%B8%B1%E0%B8%AA%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%A8%E0%B8%B6%E0%B8%81%E0%B8%A9%E0%B8%B2%3A-66112772" tabindex="-1">รหัสนักศึกษา: 66112772</h2>
+<h2 id="github%3A-https%3A%2F%2Fgithub.com%2Fapinan1234%2Fflutter_election_watch-" tabindex="-1">GitHub: <a href="https://github.com/Apinan1234/Flutter_Election_Watch-">https://github.com/Apinan1234/Flutter_Election_Watch-</a></h2>
+<hr>
+<h2 id="%E2%9C%85-%E0%B9%83%E0%B8%9A%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%A1%E0%B8%B4%E0%B8%99%E0%B8%9C%E0%B8%A5%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%AA%E0%B8%AD%E0%B8%9A%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2%E0%B8%95%E0%B8%99%E0%B9%80%E0%B8%AD%E0%B8%87-(student-checklist)" tabindex="-1">✅ ใบประเมินผลการสอบด้วยตนเอง (Student Checklist)</h2>
+<table>
+<thead>
+<tr>
+<th>ส่วน</th>
+<th>รายละเอียด</th>
+<th style="text-align:center">ทำได้</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1. Home</strong></td>
+<td>1.1 มีเมนู/ปุ่ม เชื่อมโยงไปหน้าอื่นได้ครบ 4 หน้า</td>
+<td style="text-align:center">✔️</td>
+</tr>
+<tr>
+<td></td>
+<td>1.2 ทุกหน้ามีปุ่มหรือวิธีการกดกลับมาที่หน้า Home ได้</td>
+<td style="text-align:center">✔️</td>
+</tr>
+<tr>
+<td></td>
+<td>1.3 มีคำสั่งเช็คว่าเครื่องมี SQLite แล้วหรือไม่ ตอนเข้าแอปครั้งแรก</td>
+<td style="text-align:center">✔️</td>
+</tr>
+<tr>
+<td></td>
+<td>1.4 สร้างตาราง SQLite ใหม่ได้ หากเครื่องยังไม่มี</td>
+<td style="text-align:center">✔️</td>
+</tr>
+<tr>
+<td></td>
+<td>1.5 แทรกข้อมูลตั้งต้น (2 ตาราง) ลง Database อัตโนมัติเมื่อสร้างใหม่</td>
+<td style="text-align:center">✔️</td>
+</tr>
+<tr>
+<td></td>
+<td>1.6 Query นับจำนวน "การแจ้งเหตุทั้งหมด (Offline)" ได้</td>
+<td style="text-align:center">✔️</td>
+</tr>
+<tr>
+<td></td>
+<td>1.7 Query หา "3 อันดับหน่วยเลือกตั้ง" ที่ถูกร้องเรียนมากที่สุดได้</td>
+<td style="text-align:center">✔️</td>
+</tr>
+<tr>
+<td></td>
+<td>1.8 นำข้อมูลสรุป (ข้อ 1.6, 1.7) มาแสดงบน UI ได้ถูกต้อง</td>
+<td style="text-align:center">✔️</td>
+</tr>
+<tr>
+<td><strong>2. Report</strong></td>
+<td>2.1 มีฟอร์มรับ ชื่อ, รายละเอียด และเลือกรูปภาพจากกล้อง/เครื่องได้</td>
+<td style="text-align:center">✔️</td>
+</tr>
+<tr>
+<td></td>
+<td>2.2 Dropdown "หน่วย" และ "ความผิด" ดึงค่ามาจากตาราง SQLite</td>
+<td style="text-align:center">✔️</td>
+</tr>
+<tr>
+<td></td>
+<td>2.3 โมเดล AI สามารถประมวลผลรูป และโชว์ Label + % บนหน้าจอได้</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td></td>
+<td>2.4 เขียน Logic ให้ผล AI สั่งเปลี่ยนค่า Dropdown อัตโนมัติได้สำเร็จ</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td></td>
+<td>2.5 ใช้ Custom Model ที่เทรนเอง (ไม่ใช่ MobileNet ทั่วไป)</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td></td>
+<td>2.6 บันทึกแบบ Offline (SQLite) โดยเก็บข้อมูล ครบทุกฟิลด์ สำเร็จ</td>
+<td style="text-align:center">✔️</td>
+</tr>
+<tr>
+<td></td>
+<td>2.7 บันทึกแบบ Online ส่งข้อมูลขึ้น Firebase ได้สำเร็จ</td>
+<td style="text-align:center">✔️</td>
+</tr>
+<tr>
+<td></td>
+<td>2.8 ปรับค่า evidence_photo จากเครื่องเป็น null/"OFFLINE_ONLY" ก่อนส่ง Firebase</td>
+<td style="text-align:center">✔️</td>
+</tr>
+<tr>
+<td><strong>3. Edit Station</strong></td>
+<td>3.1 มีหน้ารายชื่อ กดเลือกเพื่อเข้าฟอร์ม และดึงข้อมูลเดิมมาโชว์ได้</td>
+<td style="text-align:center">✔️</td>
+</tr>
+<tr>
+<td></td>
+<td>3.2 เช็คชื่อหน่วยว่าขึ้นต้นด้วยคำที่กำหนด หากผิดฟอร์แมตห้ามบันทึก</td>
+<td style="text-align:center">✔️</td>
+</tr>
+<tr>
+<td></td>
+<td>3.3 Query เช็คชื่อหน่วยใหม่ซ้ำกับหน่วยอื่นที่มีในระบบ (Exclude ตัวเอง) ได้</td>
+<td style="text-align:center">✔️</td>
+</tr>
+<tr>
+<td></td>
+<td>3.4 ระงับการบันทึก และโชว์แจ้งเตือน Error ระบุสาเหตุได้ชัดเจน</td>
+<td style="text-align:center">✔️</td>
+</tr>
+<tr>
+<td></td>
+<td>3.5 Query นับจำนวน (COUNT) เรื่องร้องเรียนของหน่วยนี้ จากตาราง incident_report</td>
+<td style="text-align:center">✔️</td>
+</tr>
+<tr>
+<td></td>
+<td>3.6 Logic: มีร้องเรียน → โชว์ Dialog เตือนก่อนเซฟ / ไม่มี → เซฟเลย</td>
+<td style="text-align:center">✔️</td>
+</tr>
+<tr>
+<td></td>
+<td>3.7 ระบบทำงาน SQL UPDATE อัปเดตข้อมูลลงตาราง polling_station ได้สำเร็จจริง</td>
+<td style="text-align:center">✔️</td>
+</tr>
+<tr>
+<td></td>
+<td>3.8 เมื่อบันทึกเสร็จ กลับมาหน้า List ข้อมูลอัปเดตใหม่ทันที (State Management)</td>
+<td style="text-align:center">✔️</td>
+</tr>
+<tr>
+<td><strong>4. List</strong></td>
+<td>4.1 ดึงรายการแจ้งเหตุทั้งหมดจาก SQLite (Offline) มาแสดงผลได้</td>
+<td style="text-align:center">✔️</td>
+</tr>
+<tr>
+<td></td>
+<td>4.2 สามารถแสดงผลเป็น "ชื่อหน่วยเลือกตั้ง" (ไม่ใช่ ID)</td>
+<td style="text-align:center">✔️</td>
+</tr>
+<tr>
+<td></td>
+<td>4.3 สามารถแสดงผลเป็น "ชื่อประเภทความผิด" (ไม่ใช่ ID)</td>
+<td style="text-align:center">✔️</td>
+</tr>
+<tr>
+<td></td>
+<td>4.4 แสดงภาพ Thumbnail (ดึงจาก path ของเครื่อง) โชว์ในแต่ละรายการ</td>
+<td style="text-align:center">✔️</td>
+</tr>
+<tr>
+<td></td>
+<td>4.5 มีปุ่มหรือไอคอน สั่งลบข้อมูลแจ้งเหตุแต่ละรายการได้</td>
+<td style="text-align:center">✔️</td>
+</tr>
+<tr>
+<td></td>
+<td>4.6 มี Dialog ถามยืนยัน "ความแน่ใจ" ก่อนทำการลบ</td>
+<td style="text-align:center">✔️</td>
+</tr>
+<tr>
+<td></td>
+<td>4.7 ระบบทำการลบข้อมูลออกจากตาราง SQLite ได้สำเร็จจริง</td>
+<td style="text-align:center">✔️</td>
+</tr>
+<tr>
+<td></td>
+<td>4.8 ข้อมูลหายไปจากหน้าจอทันทีเมื่อกดลบ โดยไม่ต้องเข้าหน้าใหม่</td>
+<td style="text-align:center">✔️</td>
+</tr>
+<tr>
+<td><strong>5. Search</strong></td>
+<td>5.1 มี Textbox พิมพ์ข้อความเพื่อใช้ในการค้นหา</td>
+<td style="text-align:center">✔️</td>
+</tr>
+<tr>
+<td></td>
+<td>5.2 ค้นหาแบบบางส่วน (LIKE) จากฟิลด์ "ชื่อผู้แจ้ง" ได้</td>
+<td style="text-align:center">✔️</td>
+</tr>
+<tr>
+<td></td>
+<td>5.3 ค้นหาแบบบางส่วน (LIKE) จากฟิลด์ "รายละเอียด" ได้</td>
+<td style="text-align:center">✔️</td>
+</tr>
+<tr>
+<td></td>
+<td>5.4 มี Dropdown ให้เลือกกรองตาม "ความรุนแรง (Severity)"</td>
+<td style="text-align:center">✔️</td>
+</tr>
+<tr>
+<td></td>
+<td>5.5 สามารถ Query / Join เงื่อนไขความรุนแรงกับตาราง violation_type</td>
+<td style="text-align:center">✔️</td>
+</tr>
+<tr>
+<td></td>
+<td>5.6 แสดงผลลัพธ์การกรองข้อมูลตาม Dropdown ได้ถูกต้อง</td>
+<td style="text-align:center">✔️</td>
+</tr>
+<tr>
+<td></td>
+<td>5.7 สามารถค้นหาผสมเงื่อนไข (Text + Dropdown) ได้</td>
+<td style="text-align:center">✔️</td>
+</tr>
+<tr>
+<td></td>
+<td>5.8 แสดงข้อความแจ้งเตือนทาง UI กรณีค้นหาแล้วไม่พบข้อมูล</td>
+<td style="text-align:center">✔️</td>
+</tr>
+</tbody>
+</table>
+<p><strong>คะแนนรวมที่คาดหวัง: 16.5 / 20.0 คะแนน</strong></p>
+<hr>
+<h2 id="%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%AA%E0%B8%B1%E0%B8%A1%E0%B8%9E%E0%B8%B1%E0%B8%99%E0%B8%98%E0%B9%8C%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2%E0%B8%88%E0%B8%AD-%E2%86%94-%E0%B9%84%E0%B8%9F%E0%B8%A5%E0%B9%8C%E0%B9%82%E0%B8%84%E0%B9%89%E0%B8%94" tabindex="-1">ความสัมพันธ์หน้าจอ ↔ ไฟล์โค้ด</h2>
+<table>
+<thead>
+<tr>
+<th>หน้าจอ</th>
+<th>ไฟล์หลัก</th>
+<th>ไฟล์ที่เกี่ยวข้อง</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Home Dashboard</td>
+<td><code>lib/screens/home.dart</code></td>
+<td><code>lib/helpers/database_helper.dart</code></td>
+</tr>
+<tr>
+<td>Report Incident</td>
+<td><code>lib/screens/report.dart</code></td>
+<td><code>lib/helpers/database_helper.dart</code></td>
+</tr>
+<tr>
+<td>Edit Polling Station</td>
+<td><code>lib/screens/edit_station.dart</code></td>
+<td><code>lib/helpers/database_helper.dart</code></td>
+</tr>
+<tr>
+<td>Incident List</td>
+<td><code>lib/screens/list_screen.dart</code></td>
+<td><code>lib/helpers/database_helper.dart</code></td>
+</tr>
+<tr>
+<td>Search &amp; Filter</td>
+<td><code>lib/screens/filter_screen.dart</code></td>
+<td><code>lib/helpers/database_helper.dart</code></td>
+</tr>
+<tr>
+<td>Entry Point / Routes</td>
+<td><code>lib/main.dart</code></td>
+<td>—</td>
+</tr>
+<tr>
+<td>Data Model</td>
+<td><code>lib/models/incident_report.dart</code></td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="%E0%B8%AA%E0%B9%88%E0%B8%A7%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88-1-%E2%80%94-%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2-home-dashboard" tabindex="-1">ส่วนที่ 1 — หน้า Home Dashboard</h1>
+<p><strong>ไฟล์ที่เกี่ยวข้อง:</strong> <code>lib/screens/home.dart</code> + <code>lib/helpers/database_helper.dart</code></p>
+<h2 id="%5B1.1%5D-%E0%B8%9B%E0%B8%B8%E0%B9%88%E0%B8%A1%E0%B9%80%E0%B8%8A%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%A1%E0%B9%82%E0%B8%A2%E0%B8%87%E0%B9%84%E0%B8%9B-4-%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2%E0%B8%88%E0%B8%AD" tabindex="-1">[1.1] ปุ่มเชื่อมโยงไป 4 หน้าจอ</h2>
+<p>อธิบาย: ใช้ <code>ElevatedButton.icon</code> ทั้ง 4 ปุ่ม แต่ละปุ่มเรียก <code>Navigator.pushNamed(context, route)</code> พร้อม <code>.then((_) =&gt; _loadStats())</code> เพื่อ refresh ข้อมูลเมื่อกลับมา</p>
+<pre class="hljs"><code><div><span class="hljs-comment">// home.dart — บรรทัด 89-92</span>
+_menuButton(Icons.report,            <span class="hljs-string">'แจ้งเหตุ (Report)'</span>,           <span class="hljs-string">'/report'</span>, Colors.red),
+_menuButton(Icons.edit_location_alt, <span class="hljs-string">'แก้ไขหน่วยเลือกตั้ง (Edit)'</span>, <span class="hljs-string">'/edit'</span>,   Colors.orange),
+_menuButton(Icons.list_alt,          <span class="hljs-string">'รายการแจ้งเหตุ (List)'</span>,       <span class="hljs-string">'/list'</span>,   Colors.blue),
+_menuButton(Icons.search,            <span class="hljs-string">'ค้นหา (Search)'</span>,              <span class="hljs-string">'/filter'</span>, Colors.green),
+
+<span class="hljs-comment">// helper method</span>
+Widget _menuButton(IconData icon, <span class="hljs-built_in">String</span> label, <span class="hljs-built_in">String</span> route, Color color) {
+  <span class="hljs-keyword">return</span> Padding(
+    padding: <span class="hljs-keyword">const</span> EdgeInsets.only(bottom: <span class="hljs-number">8</span>),
+    child: ElevatedButton.icon(
+      onPressed: () =&gt; _goTo(route),
+      icon: Icon(icon),
+      label: Text(label),
+      style: ElevatedButton.styleFrom(
+        minimumSize: <span class="hljs-keyword">const</span> Size.fromHeight(<span class="hljs-number">50</span>),
+        backgroundColor: color, foregroundColor: Colors.white,
+      ),
+    ),
+  );
+}
+</div></code></pre>
+<h2 id="%5B1.2%5D-%E0%B8%97%E0%B8%B8%E0%B8%81%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2%E0%B8%81%E0%B8%A5%E0%B8%B1%E0%B8%9A-home-%E0%B9%84%E0%B8%94%E0%B9%89" tabindex="-1">[1.2] ทุกหน้ากลับ Home ได้</h2>
+<p>อธิบาย: ทุกหน้าจอใช้ <code>leading: IconButton(icon: Icons.home)</code> ใน AppBar เรียก <code>Navigator.pushNamedAndRemoveUntil(context, '/', (_) =&gt; false)</code> เพื่อกลับ Home</p>
+<pre class="hljs"><code><div><span class="hljs-comment">// ตัวอย่างจาก list_screen.dart — บรรทัด 85-88</span>
+leading: IconButton(
+  icon: <span class="hljs-keyword">const</span> Icon(Icons.home),
+  onPressed: () =&gt; Navigator.pushNamedAndRemoveUntil(context, <span class="hljs-string">'/'</span>, (_) =&gt; <span class="hljs-keyword">false</span>),
+),
+</div></code></pre>
+<h2 id="%5B1.3%5D-%E0%B9%80%E0%B8%8A%E0%B9%87%E0%B8%84%E0%B8%A7%E0%B9%88%E0%B8%B2%E0%B8%A1%E0%B8%B5-sqlite-db-%E0%B9%81%E0%B8%A5%E0%B9%89%E0%B8%A7%E0%B8%AB%E0%B8%A3%E0%B8%B7%E0%B8%AD%E0%B8%A2%E0%B8%B1%E0%B8%87" tabindex="-1">[1.3] เช็คว่ามี SQLite DB แล้วหรือยัง</h2>
+<p>อธิบาย: ใช้ <code>databaseExists(path)</code> จาก sqflite ตรวจสอบไฟล์ DB</p>
+<pre class="hljs"><code><div><span class="hljs-comment">// database_helper.dart — บรรทัด 16-21</span>
+Future&lt;<span class="hljs-built_in">bool</span>&gt; dbExists() <span class="hljs-keyword">async</span> {
+  <span class="hljs-keyword">final</span> dbPath = <span class="hljs-keyword">await</span> getDatabasesPath();
+  <span class="hljs-keyword">final</span> full = p.join(dbPath, <span class="hljs-string">'election.db'</span>);
+  <span class="hljs-keyword">return</span> databaseExists(full);
+}
+</div></code></pre>
+<h2 id="%5B1.4%5D-%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B8%95%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%87-sqlite-%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88%E0%B8%AB%E0%B8%B2%E0%B8%81%E0%B8%A2%E0%B8%B1%E0%B8%87%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B8%A1%E0%B8%B5" tabindex="-1">[1.4] สร้างตาราง SQLite ใหม่หากยังไม่มี</h2>
+<p>อธิบาย: ใช้ <code>openDatabase()</code> กับ callback <code>onCreate</code> จะถูกเรียกเฉพาะเมื่อไม่มีไฟล์ DB → สร้าง 3 ตาราง</p>
+<pre class="hljs"><code><div><span class="hljs-comment">// database_helper.dart — บรรทัด 26-61</span>
+<span class="hljs-keyword">return</span> openDatabase(
+  full,
+  version: <span class="hljs-number">1</span>,
+  onCreate: (db, v) <span class="hljs-keyword">async</span> {
+    <span class="hljs-comment">// [1.4] สร้างตาราง</span>
+    <span class="hljs-keyword">await</span> db.execute(<span class="hljs-string">'''CREATE TABLE polling_station(
+      station_id   INTEGER PRIMARY KEY,
+      station_name TEXT, zone TEXT, province TEXT
+    )'''</span>);
+    <span class="hljs-keyword">await</span> db.execute(<span class="hljs-string">'''CREATE TABLE violation_type(
+      type_id   INTEGER PRIMARY KEY,
+      type_name TEXT, severity TEXT
+    )'''</span>);
+    <span class="hljs-keyword">await</span> db.execute(<span class="hljs-string">'''CREATE TABLE incident_report(
+      report_id INTEGER PRIMARY KEY AUTOINCREMENT,
+      station_id INTEGER, type_id INTEGER,
+      reporter_name TEXT, description TEXT,
+      evidence_photo TEXT, timestamp TEXT,
+      ai_result TEXT, ai_confidence REAL,
+      FOREIGN KEY (station_id) REFERENCES polling_station(station_id),
+      FOREIGN KEY (type_id) REFERENCES violation_type(type_id)
+    )'''</span>);
+    <span class="hljs-keyword">await</span> _seedData(db);  <span class="hljs-comment">// [1.5]</span>
+  },
+);
+</div></code></pre>
+<h2 id="%5B1.5%5D-seed-data-%E0%B8%AD%E0%B8%B1%E0%B8%95%E0%B9%82%E0%B8%99%E0%B8%A1%E0%B8%B1%E0%B8%95%E0%B8%B4" tabindex="-1">[1.5] Seed data อัตโนมัติ</h2>
+<p>อธิบาย: ฟังก์ชัน <code>_seedData()</code> INSERT ข้อมูลตาราง <code>polling_station</code> (4 รายการ) และ <code>violation_type</code> (5 รายการ) ตาม spec</p>
+<pre class="hljs"><code><div><span class="hljs-comment">// database_helper.dart — บรรทัด 63-87</span>
+Future&lt;<span class="hljs-keyword">void</span>&gt; _seedData(Database db) <span class="hljs-keyword">async</span> {
+  <span class="hljs-keyword">final</span> stations = [
+    [<span class="hljs-number">101</span>, <span class="hljs-string">'โรงเรียนวัดพระมหาธาตุ'</span>, <span class="hljs-string">'เขต 1'</span>, <span class="hljs-string">'นครศรีธรรมราช'</span>],
+    [<span class="hljs-number">102</span>, <span class="hljs-string">'เต็นท์หน้าตลาดท่าวัง'</span>,   <span class="hljs-string">'เขต 1'</span>, <span class="hljs-string">'นครศรีธรรมราช'</span>],
+    [<span class="hljs-number">103</span>, <span class="hljs-string">'ศาลากลางหมู่บ้านคีรีวง'</span>, <span class="hljs-string">'เขต 2'</span>, <span class="hljs-string">'นครศรีธรรมราช'</span>],
+    [<span class="hljs-number">104</span>, <span class="hljs-string">'หอประชุมอำเภอทุ่งสง'</span>,    <span class="hljs-string">'เขต 3'</span>, <span class="hljs-string">'นครศรีธรรมราช'</span>],
+  ];
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">final</span> s <span class="hljs-keyword">in</span> stations) {
+    <span class="hljs-keyword">await</span> db.insert(<span class="hljs-string">'polling_station'</span>, {
+      <span class="hljs-string">'station_id'</span>: s[<span class="hljs-number">0</span>], <span class="hljs-string">'station_name'</span>: s[<span class="hljs-number">1</span>], <span class="hljs-string">'zone'</span>: s[<span class="hljs-number">2</span>], <span class="hljs-string">'province'</span>: s[<span class="hljs-number">3</span>]
+    });
+  }
+  <span class="hljs-keyword">final</span> types = [
+    [<span class="hljs-number">1</span>, <span class="hljs-string">'ซื้อสิทธิ์ขายเสียง (Buying Votes)'</span>, <span class="hljs-string">'High'</span>],
+    [<span class="hljs-number">2</span>, <span class="hljs-string">'ขนคนไปลงคะแนน (Transportation)'</span>, <span class="hljs-string">'High'</span>],
+    [<span class="hljs-number">3</span>, <span class="hljs-string">'หาเสียงเกินเวลา (Overtime Campaign)'</span>, <span class="hljs-string">'Medium'</span>],
+    [<span class="hljs-number">4</span>, <span class="hljs-string">'ทำลายป้ายหาเสียง (Vandalism)'</span>, <span class="hljs-string">'Low'</span>],
+    [<span class="hljs-number">5</span>, <span class="hljs-string">'เจ้าหน้าที่วางตัวไม่เป็นกลาง (Bias Official)'</span>, <span class="hljs-string">'High'</span>],
+  ];
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">final</span> t <span class="hljs-keyword">in</span> types) {
+    <span class="hljs-keyword">await</span> db.insert(<span class="hljs-string">'violation_type'</span>, {
+      <span class="hljs-string">'type_id'</span>: t[<span class="hljs-number">0</span>], <span class="hljs-string">'type_name'</span>: t[<span class="hljs-number">1</span>], <span class="hljs-string">'severity'</span>: t[<span class="hljs-number">2</span>]
+    });
+  }
+}
+</div></code></pre>
+<h2 id="%5B1.6%5D-query-%E0%B8%99%E0%B8%B1%E0%B8%9A%E0%B8%88%E0%B8%B3%E0%B8%99%E0%B8%A7%E0%B8%99%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%97%E0%B8%B1%E0%B9%89%E0%B8%87%E0%B8%AB%E0%B8%A1%E0%B8%94%E0%B9%81%E0%B8%9A%E0%B8%9A-offline" tabindex="-1">[1.6] Query นับจำนวนรายงานทั้งหมดแบบ Offline</h2>
+<p>อธิบาย: ใช้ <code>SELECT COUNT(*) FROM incident_report</code> ผ่าน rawQuery</p>
+<pre class="hljs"><code><div><span class="hljs-comment">// database_helper.dart — บรรทัด 91-95</span>
+Future&lt;<span class="hljs-built_in">int</span>&gt; countAllReports() <span class="hljs-keyword">async</span> {
+  <span class="hljs-keyword">final</span> db = <span class="hljs-keyword">await</span> database;
+  <span class="hljs-keyword">final</span> r = <span class="hljs-keyword">await</span> db.rawQuery(<span class="hljs-string">'SELECT COUNT(*) as c FROM incident_report'</span>);
+  <span class="hljs-keyword">return</span> (r.first[<span class="hljs-string">'c'</span>] <span class="hljs-keyword">as</span> <span class="hljs-built_in">int?</span>) ?? <span class="hljs-number">0</span>;
+}
+</div></code></pre>
+<h2 id="%5B1.7%5D-query-top-3-%E0%B8%AB%E0%B8%99%E0%B9%88%E0%B8%A7%E0%B8%A2%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%96%E0%B8%B9%E0%B8%81%E0%B8%A3%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%A1%E0%B8%B2%E0%B8%81%E0%B8%AA%E0%B8%B8%E0%B8%94" tabindex="-1">[1.7] Query TOP 3 หน่วยที่ถูกร้องเรียนมากสุด</h2>
+<p>อธิบาย: ใช้ SQL GROUP BY + ORDER BY DESC + LIMIT 3 พร้อม JOIN กับ polling_station เพื่อได้ชื่อหน่วย</p>
+<pre class="hljs"><code><div><span class="hljs-comment">// database_helper.dart — บรรทัด 98-108</span>
+Future&lt;<span class="hljs-built_in">List</span>&lt;<span class="hljs-built_in">Map</span>&lt;<span class="hljs-built_in">String</span>, <span class="hljs-built_in">dynamic</span>&gt;&gt;&gt; getTop3Stations() <span class="hljs-keyword">async</span> {
+  <span class="hljs-keyword">final</span> db = <span class="hljs-keyword">await</span> database;
+  <span class="hljs-keyword">return</span> db.rawQuery(<span class="hljs-string">'''
+    SELECT ps.station_name, COUNT(*) as total
+    FROM   incident_report ir
+    JOIN   polling_station ps ON ir.station_id = ps.station_id
+    GROUP  BY ir.station_id
+    ORDER  BY total DESC
+    LIMIT  3
+  '''</span>);
+}
+</div></code></pre>
+<h2 id="%5B1.8%5D-%E0%B9%81%E0%B8%AA%E0%B8%94%E0%B8%87%E0%B8%9C%E0%B8%A5%E0%B8%9A%E0%B8%99-ui" tabindex="-1">[1.8] แสดงผลบน UI</h2>
+<p>อธิบาย: เรียก <code>_loadStats()</code> ใน <code>initState()</code> แล้วแสดงผลด้วย <code>Card</code> + <code>Text</code> + <code>ListTile</code></p>
+<pre class="hljs"><code><div><span class="hljs-comment">// home.dart — บรรทัด 22-27 (load ข้อมูล)</span>
+Future&lt;<span class="hljs-keyword">void</span>&gt; _loadStats() <span class="hljs-keyword">async</span> {
+  setState(() =&gt; _loading = <span class="hljs-keyword">true</span>);
+  <span class="hljs-keyword">final</span> total = <span class="hljs-keyword">await</span> _db.countAllReports();     <span class="hljs-comment">// [1.6]</span>
+  <span class="hljs-keyword">final</span> top3  = <span class="hljs-keyword">await</span> _db.getTop3Stations();    <span class="hljs-comment">// [1.7]</span>
+  setState(() { _total = total; _top3 = top3; _loading = <span class="hljs-keyword">false</span>; });
+}
+
+<span class="hljs-comment">// home.dart — บรรทัด 60-61 (แสดงจำนวน)</span>
+Text(<span class="hljs-string">'รายงานทั้งหมด (Offline)'</span>, style: TextStyle(color: Colors.grey)),
+Text(<span class="hljs-string">'<span class="hljs-subst">$_total</span> เรื่อง'</span>, style: TextStyle(fontSize: <span class="hljs-number">28</span>, fontWeight: FontWeight.bold)),
+
+<span class="hljs-comment">// home.dart — บรรทัด 72-84 (แสดง Top 3)</span>
+_top3.asMap().entries.map((e) =&gt; Card(
+  child: ListTile(
+    leading: CircleAvatar(child: Text(<span class="hljs-string">'<span class="hljs-subst">${e.key + <span class="hljs-number">1</span>}</span>'</span>)),
+    title: Text(e.value[<span class="hljs-string">'station_name'</span>] ?? <span class="hljs-string">'-'</span>),
+    trailing: Chip(label: Text(<span class="hljs-string">'<span class="hljs-subst">${e.value[<span class="hljs-string">'total'</span>]}</span> เรื่อง'</span>)),
+  ),
+)),
+</div></code></pre>
+<hr>
+<h1 id="%E0%B8%AA%E0%B9%88%E0%B8%A7%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88-2-%E2%80%94-%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2-report-incident" tabindex="-1">ส่วนที่ 2 — หน้า Report Incident</h1>
+<p><strong>ไฟล์ที่เกี่ยวข้อง:</strong> <code>lib/screens/report.dart</code> + <code>lib/helpers/database_helper.dart</code></p>
+<h2 id="%5B2.1%5D-%E0%B8%9F%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A1%E0%B8%A3%E0%B8%B1%E0%B8%9A-%E0%B8%8A%E0%B8%B7%E0%B9%88%E0%B8%AD%2C-%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%A5%E0%B8%B0%E0%B9%80%E0%B8%AD%E0%B8%B5%E0%B8%A2%E0%B8%94%2C-%E0%B9%80%E0%B8%A5%E0%B8%B7%E0%B8%AD%E0%B8%81%E0%B8%A3%E0%B8%B9%E0%B8%9B" tabindex="-1">[2.1] ฟอร์มรับ ชื่อ, รายละเอียด, เลือกรูป</h2>
+<p>อธิบาย: ใช้ <code>Form</code> + <code>TextFormField</code> 2 ช่อง (ชื่อ + รายละเอียด) และ <code>ImagePicker</code> เลือกรูปจากกล้อง/คลังภาพ แสดงรูปด้วย <code>Image.file()</code></p>
+<pre class="hljs"><code><div><span class="hljs-comment">// report.dart — บรรทัด 41-46 (เลือกรูป)</span>
+Future&lt;<span class="hljs-keyword">void</span>&gt; _pickImage(ImageSource src) <span class="hljs-keyword">async</span> {
+  <span class="hljs-keyword">final</span> f = <span class="hljs-keyword">await</span> _picker.pickImage(source: src, maxWidth: <span class="hljs-number">800</span>);
+  <span class="hljs-keyword">if</span> (f != <span class="hljs-keyword">null</span>) setState(() { _imagePath = f.path; });
+}
+
+<span class="hljs-comment">// report.dart — บรรทัด 157-168 (ปุ่มกล้อง + คลังภาพ)</span>
+Row(children: [
+  Expanded(child: OutlinedButton.icon(
+    onPressed: () =&gt; _pickImage(ImageSource.camera),
+    icon: <span class="hljs-keyword">const</span> Icon(Icons.camera_alt), label: <span class="hljs-keyword">const</span> Text(<span class="hljs-string">'ถ่ายภาพ'</span>),
+  )),
+  <span class="hljs-keyword">const</span> SizedBox(width: <span class="hljs-number">8</span>),
+  Expanded(child: OutlinedButton.icon(
+    onPressed: () =&gt; _pickImage(ImageSource.gallery),
+    icon: <span class="hljs-keyword">const</span> Icon(Icons.photo_library), label: <span class="hljs-keyword">const</span> Text(<span class="hljs-string">'คลังภาพ'</span>),
+  )),
+]),
+
+<span class="hljs-comment">// report.dart — บรรทัด 172-178 (แสดงรูป)</span>
+<span class="hljs-keyword">if</span> (_imagePath != <span class="hljs-keyword">null</span>) ...[
+  ClipRRect(borderRadius: BorderRadius.circular(<span class="hljs-number">8</span>),
+    child: Image.file(File(_imagePath!), height: <span class="hljs-number">200</span>, fit: BoxFit.cover)),
+],
+</div></code></pre>
+<h2 id="%5B2.2%5D-dropdown-%E0%B8%94%E0%B8%B6%E0%B8%87%E0%B8%84%E0%B9%88%E0%B8%B2%E0%B8%88%E0%B8%B2%E0%B8%81%E0%B8%95%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%87-sqlite" tabindex="-1">[2.2] Dropdown ดึงค่าจากตาราง SQLite</h2>
+<p>อธิบาย: เรียก <code>_db.getAllStations()</code> และ <code>_db.getAllTypes()</code> ใน <code>initState()</code> แล้วสร้าง <code>DropdownButtonFormField</code> 2 ตัว</p>
+<pre class="hljs"><code><div><span class="hljs-comment">// report.dart — บรรทัด 34-38</span>
+Future&lt;<span class="hljs-keyword">void</span>&gt; _loadDropdowns() <span class="hljs-keyword">async</span> {
+  <span class="hljs-keyword">final</span> s = <span class="hljs-keyword">await</span> _db.getAllStations();
+  <span class="hljs-keyword">final</span> t = <span class="hljs-keyword">await</span> _db.getAllTypes();
+  setState(() { _stations = s; _types = t; });
+}
+
+<span class="hljs-comment">// report.dart — บรรทัด 115-124 (Dropdown หน่วยเลือกตั้ง)</span>
+DropdownButtonFormField&lt;<span class="hljs-built_in">int</span>&gt;(
+  decoration: <span class="hljs-keyword">const</span> InputDecoration(labelText: <span class="hljs-string">'หน่วยเลือกตั้ง *'</span>, border: OutlineInputBorder()),
+  items: _stations.map((s) =&gt; DropdownMenuItem&lt;<span class="hljs-built_in">int</span>&gt;(
+    value: s[<span class="hljs-string">'station_id'</span>] <span class="hljs-keyword">as</span> <span class="hljs-built_in">int</span>,
+    child: Text(<span class="hljs-string">'<span class="hljs-subst">${s[<span class="hljs-string">'station_name'</span>]}</span> (<span class="hljs-subst">${s[<span class="hljs-string">'zone'</span>]}</span>)'</span>),
+  )).toList(),
+  onChanged: (v) =&gt; setState(() =&gt; _selStation = v),
+  validator: (v) =&gt; v == <span class="hljs-keyword">null</span> ? <span class="hljs-string">'กรุณาเลือกหน่วยเลือกตั้ง'</span> : <span class="hljs-keyword">null</span>,
+),
+</div></code></pre>
+<h2 id="%5B2.6%5D-%E0%B8%9A%E0%B8%B1%E0%B8%99%E0%B8%97%E0%B8%B6%E0%B8%81%E0%B9%81%E0%B8%9A%E0%B8%9A-offline-(sqlite)-%E0%B8%84%E0%B8%A3%E0%B8%9A%E0%B8%97%E0%B8%B8%E0%B8%81%E0%B8%9F%E0%B8%B4%E0%B8%A5%E0%B8%94%E0%B9%8C" tabindex="-1">[2.6] บันทึกแบบ Offline (SQLite) ครบทุกฟิลด์</h2>
+<p>อธิบาย: INSERT ครบ 8 ฟิลด์ (station_id, type_id, reporter_name, description, evidence_photo, timestamp, ai_result, ai_confidence)</p>
+<pre class="hljs"><code><div><span class="hljs-comment">// report.dart — บรรทัด 49-71</span>
+Future&lt;<span class="hljs-keyword">void</span>&gt; _save() <span class="hljs-keyword">async</span> {
+  <span class="hljs-keyword">if</span> (!_formKey.currentState!.validate()) <span class="hljs-keyword">return</span>;
+  setState(() =&gt; _saving = <span class="hljs-keyword">true</span>);
+  <span class="hljs-keyword">final</span> ts = <span class="hljs-built_in">DateTime</span>.now().toString().substring(<span class="hljs-number">0</span>, <span class="hljs-number">19</span>);
+  <span class="hljs-keyword">await</span> _db.insertReport({
+    <span class="hljs-string">'station_id'</span>:     _selStation,
+    <span class="hljs-string">'type_id'</span>:        _selType,
+    <span class="hljs-string">'reporter_name'</span>:  _nameCtrl.text.trim(),
+    <span class="hljs-string">'description'</span>:    _descCtrl.text.trim(),
+    <span class="hljs-string">'evidence_photo'</span>: _imagePath,
+    <span class="hljs-string">'timestamp'</span>:      ts,
+    <span class="hljs-string">'ai_result'</span>:      _aiLabel,
+    <span class="hljs-string">'ai_confidence'</span>:  _aiConf,
+  });
+  <span class="hljs-keyword">if</span> (mounted) {
+    ScaffoldMessenger.of(context).showSnackBar(<span class="hljs-keyword">const</span> SnackBar(content: Text(<span class="hljs-string">'บันทึกสำเร็จ ✅'</span>)));
+    Navigator.pop(context);
+  }
+}
+</div></code></pre>
+<hr>
+<h1 id="%E0%B8%AA%E0%B9%88%E0%B8%A7%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88-3-%E2%80%94-%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2-edit-polling-station" tabindex="-1">ส่วนที่ 3 — หน้า Edit Polling Station</h1>
+<p><strong>ไฟล์ที่เกี่ยวข้อง:</strong> <code>lib/screens/edit_station.dart</code> + <code>lib/helpers/database_helper.dart</code></p>
+<h2 id="%5B3.1%5D-%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%8A%E0%B8%B7%E0%B9%88%E0%B8%AD-%2B-%E0%B8%81%E0%B8%94%E0%B9%80%E0%B8%A5%E0%B8%B7%E0%B8%AD%E0%B8%81-%2B-%E0%B8%94%E0%B8%B6%E0%B8%87%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B9%80%E0%B8%94%E0%B8%B4%E0%B8%A1" tabindex="-1">[3.1] หน้ารายชื่อ + กดเลือก + ดึงข้อมูลเดิม</h2>
+<p>อธิบาย: <code>EditStationScreen</code> แสดง <code>ListView</code> ของหน่วยทั้งหมด เมื่อ <code>onTap</code> จะ push <code>_EditFormScreen(station: st)</code> ซึ่งโหลดข้อมูลเดิมจาก map เข้า <code>TextEditingController</code></p>
+<pre class="hljs"><code><div><span class="hljs-comment">// edit_station.dart — บรรทัด 44-56</span>
+ListTile(
+  leading: <span class="hljs-keyword">const</span> Icon(Icons.location_on, color: Colors.orange),
+  title: Text(st[<span class="hljs-string">'station_name'</span>] ?? <span class="hljs-string">'-'</span>),
+  subtitle: Text(<span class="hljs-string">'<span class="hljs-subst">${st[<span class="hljs-string">'zone'</span>]}</span> — <span class="hljs-subst">${st[<span class="hljs-string">'province'</span>]}</span>'</span>),
+  trailing: <span class="hljs-keyword">const</span> Icon(Icons.edit),
+  onTap: () <span class="hljs-keyword">async</span> {
+    <span class="hljs-keyword">final</span> changed = <span class="hljs-keyword">await</span> Navigator.push&lt;<span class="hljs-built_in">bool</span>&gt;(
+      ctx, MaterialPageRoute(builder: (_) =&gt; _EditFormScreen(station: st)),
+    );
+    <span class="hljs-keyword">if</span> (changed == <span class="hljs-keyword">true</span>) _loadStations(); <span class="hljs-comment">// [3.8] refresh</span>
+  },
+),
+
+<span class="hljs-comment">// edit_station.dart — บรรทัด 83-84 (ดึงข้อมูลเดิมเข้าฟอร์ม)</span>
+_nameCtrl = TextEditingController(text: widget.station[<span class="hljs-string">'station_name'</span>] <span class="hljs-keyword">as</span> <span class="hljs-built_in">String?</span> ?? <span class="hljs-string">''</span>);
+</div></code></pre>
+<h2 id="%5B3.2%5D-%E0%B9%80%E0%B8%8A%E0%B9%87%E0%B8%84-prefix-%E0%B8%8A%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%AB%E0%B8%99%E0%B9%88%E0%B8%A7%E0%B8%A2" tabindex="-1">[3.2] เช็ค Prefix ชื่อหน่วย</h2>
+<p>อธิบาย: สร้าง list <code>_allowedPrefixes</code> แล้วเช็คด้วย <code>name.startsWith(p)</code> ถ้าไม่ผ่าน → แจ้ง error</p>
+<pre class="hljs"><code><div><span class="hljs-comment">// edit_station.dart — บรรทัด 78, 90-91</span>
+<span class="hljs-keyword">static</span> <span class="hljs-keyword">const</span> _allowedPrefixes = [<span class="hljs-string">'โรงเรียน'</span>, <span class="hljs-string">'วัด'</span>, <span class="hljs-string">'เต็นท์'</span>, <span class="hljs-string">'ศาลา'</span>, <span class="hljs-string">'หอประชุม'</span>];
+
+<span class="hljs-built_in">bool</span> _isValidPrefix(<span class="hljs-built_in">String</span> name) =&gt; _allowedPrefixes.any((p) =&gt; name.startsWith(p));
+</div></code></pre>
+<h2 id="%5B3.3%5D-%E0%B9%80%E0%B8%8A%E0%B9%87%E0%B8%84%E0%B8%8A%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%8B%E0%B9%89%E0%B8%B3-(exclude-%E0%B8%95%E0%B8%B1%E0%B8%A7%E0%B9%80%E0%B8%AD%E0%B8%87)" tabindex="-1">[3.3] เช็คชื่อซ้ำ (Exclude ตัวเอง)</h2>
+<p>อธิบาย: Query <code>SELECT COUNT(*) WHERE station_name = ? AND station_id != ?</code> จาก <code>database_helper.dart</code></p>
+<pre class="hljs"><code><div><span class="hljs-comment">// database_helper.dart — บรรทัด 170-178</span>
+Future&lt;<span class="hljs-built_in">bool</span>&gt; isNameDuplicate(<span class="hljs-built_in">String</span> name, <span class="hljs-built_in">int</span> excludeId) <span class="hljs-keyword">async</span> {
+  <span class="hljs-keyword">final</span> db = <span class="hljs-keyword">await</span> database;
+  <span class="hljs-keyword">final</span> r = <span class="hljs-keyword">await</span> db.rawQuery(
+    <span class="hljs-string">'SELECT COUNT(*) as c FROM polling_station WHERE station_name = ? AND station_id != ?'</span>,
+    [name, excludeId],
+  );
+  <span class="hljs-keyword">return</span> ((r.first[<span class="hljs-string">'c'</span>] <span class="hljs-keyword">as</span> <span class="hljs-built_in">int?</span>) ?? <span class="hljs-number">0</span>) &gt; <span class="hljs-number">0</span>;
+}
+</div></code></pre>
+<h2 id="%5B3.4%5D-%E0%B9%81%E0%B8%88%E0%B9%89%E0%B8%87%E0%B9%80%E0%B8%95%E0%B8%B7%E0%B8%AD%E0%B8%99-error-%E0%B9%81%E0%B8%A2%E0%B8%81%E0%B8%AA%E0%B8%B2%E0%B9%80%E0%B8%AB%E0%B8%95%E0%B8%B8%E0%B8%8A%E0%B8%B1%E0%B8%94%E0%B9%80%E0%B8%88%E0%B8%99" tabindex="-1">[3.4] แจ้งเตือน Error แยกสาเหตุชัดเจน</h2>
+<p>อธิบาย: SnackBar สีแดง แสดงข้อความต่างกันตามสาเหตุ</p>
+<pre class="hljs"><code><div><span class="hljs-comment">// edit_station.dart — บรรทัด 108-120</span>
+<span class="hljs-keyword">if</span> (!_isValidPrefix(name)) {
+  _showError(<span class="hljs-string">'❌ รูปแบบชื่อไม่ถูกต้อง: ต้องขึ้นต้นด้วย โรงเรียน / วัด / เต็นท์ / ศาลา / หอประชุม'</span>);
+  <span class="hljs-keyword">return</span>;
+}
+<span class="hljs-keyword">final</span> isDup = <span class="hljs-keyword">await</span> _db.isNameDuplicate(name, widget.station[<span class="hljs-string">'station_id'</span>] <span class="hljs-keyword">as</span> <span class="hljs-built_in">int</span>);
+<span class="hljs-keyword">if</span> (isDup) {
+  _showError(<span class="hljs-string">'❌ ชื่อซ้ำ: มีหน่วยเลือกตั้งชื่อนี้อยู่แล้วในระบบ'</span>);
+  <span class="hljs-keyword">return</span>;
+}
+</div></code></pre>
+<h2 id="%5B3.5%5D-count-%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%A3%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%AB%E0%B8%99%E0%B9%88%E0%B8%A7%E0%B8%A2" tabindex="-1">[3.5] COUNT เรื่องร้องเรียนของหน่วย</h2>
+<pre class="hljs"><code><div><span class="hljs-comment">// database_helper.dart — บรรทัด 180-188</span>
+Future&lt;<span class="hljs-built_in">int</span>&gt; countReportsByStation(<span class="hljs-built_in">int</span> stationId) <span class="hljs-keyword">async</span> {
+  <span class="hljs-keyword">final</span> db = <span class="hljs-keyword">await</span> database;
+  <span class="hljs-keyword">final</span> r = <span class="hljs-keyword">await</span> db.rawQuery(
+    <span class="hljs-string">'SELECT COUNT(*) as c FROM incident_report WHERE station_id = ?'</span>,
+    [stationId],
+  );
+  <span class="hljs-keyword">return</span> (r.first[<span class="hljs-string">'c'</span>] <span class="hljs-keyword">as</span> <span class="hljs-built_in">int?</span>) ?? <span class="hljs-number">0</span>;
+}
+</div></code></pre>
+<h2 id="%5B3.6%5D-dialog-%E0%B8%A2%E0%B8%B7%E0%B8%99%E0%B8%A2%E0%B8%B1%E0%B8%99%E0%B8%81%E0%B9%88%E0%B8%AD%E0%B8%99%E0%B8%9A%E0%B8%B1%E0%B8%99%E0%B8%97%E0%B8%B6%E0%B8%81-(%E0%B8%96%E0%B9%89%E0%B8%B2%E0%B8%A1%E0%B8%B5%E0%B8%A3%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99)" tabindex="-1">[3.6] Dialog ยืนยันก่อนบันทึก (ถ้ามีร้องเรียน)</h2>
+<p>อธิบาย: ถ้า count &gt; 0 แสดง <code>AlertDialog</code> บอกจำนวนร้องเรียน รอกดยืนยัน ถ้า count == 0 บันทึกเลย</p>
+<pre class="hljs"><code><div><span class="hljs-comment">// edit_station.dart — บรรทัด 127-145</span>
+<span class="hljs-keyword">final</span> count = <span class="hljs-keyword">await</span> _db.countReportsByStation(widget.station[<span class="hljs-string">'station_id'</span>] <span class="hljs-keyword">as</span> <span class="hljs-built_in">int</span>);
+<span class="hljs-keyword">if</span> (count &gt; <span class="hljs-number">0</span>) {
+  <span class="hljs-keyword">final</span> ok = <span class="hljs-keyword">await</span> showDialog&lt;<span class="hljs-built_in">bool</span>&gt;(
+    context: context,
+    builder: (ctx) =&gt; AlertDialog(
+      title: <span class="hljs-keyword">const</span> Text(<span class="hljs-string">'⚠️ มีประวัติร้องเรียน'</span>),
+      content: Text(<span class="hljs-string">'หน่วยนี้มีประวัติร้องเรียน <span class="hljs-subst">$count</span> เรื่อง\nยืนยันการแก้ไขข้อมูลหรือไม่?'</span>),
+      actions: [
+        TextButton(onPressed: () =&gt; Navigator.pop(ctx, <span class="hljs-keyword">false</span>), child: <span class="hljs-keyword">const</span> Text(<span class="hljs-string">'ยกเลิก'</span>)),
+        ElevatedButton(onPressed: () =&gt; Navigator.pop(ctx, <span class="hljs-keyword">true</span>), child: <span class="hljs-keyword">const</span> Text(<span class="hljs-string">'ยืนยัน'</span>)),
+      ],
+    ),
+  );
+  <span class="hljs-keyword">if</span> (ok != <span class="hljs-keyword">true</span>) { setState(() =&gt; _saving = <span class="hljs-keyword">false</span>); <span class="hljs-keyword">return</span>; }
+}
+</div></code></pre>
+<h2 id="%5B3.7%5D-sql-update" tabindex="-1">[3.7] SQL UPDATE</h2>
+<pre class="hljs"><code><div><span class="hljs-comment">// database_helper.dart — บรรทัด 190-199</span>
+Future&lt;<span class="hljs-built_in">int</span>&gt; updateStationName(<span class="hljs-built_in">int</span> stationId, <span class="hljs-built_in">String</span> newName) <span class="hljs-keyword">async</span> {
+  <span class="hljs-keyword">final</span> db = <span class="hljs-keyword">await</span> database;
+  <span class="hljs-keyword">return</span> db.update(<span class="hljs-string">'polling_station'</span>, {<span class="hljs-string">'station_name'</span>: newName},
+    where: <span class="hljs-string">'station_id = ?'</span>, whereArgs: [stationId]);
+}
+</div></code></pre>
+<h2 id="%5B3.8%5D-state-refresh-%E0%B8%81%E0%B8%A5%E0%B8%B1%E0%B8%9A%E0%B8%A1%E0%B8%B2%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2-list" tabindex="-1">[3.8] State Refresh กลับมาหน้า List</h2>
+<p>อธิบาย: <code>Navigator.pop(context, true)</code> ส่ง true กลับ → หน้ารายชื่อเช็ค <code>if (changed == true) _loadStations()</code></p>
+<pre class="hljs"><code><div><span class="hljs-comment">// edit_station.dart — บรรทัด 154 (popup ส่ง true)</span>
+Navigator.pop(context, <span class="hljs-keyword">true</span>);
+
+<span class="hljs-comment">// edit_station.dart — บรรทัด 55 (หน้ารายชื่อรับ true แล้ว refresh)</span>
+<span class="hljs-keyword">if</span> (changed == <span class="hljs-keyword">true</span>) _loadStations();
+</div></code></pre>
+<hr>
+<h1 id="%E0%B8%AA%E0%B9%88%E0%B8%A7%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88-4-%E2%80%94-%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2-incident-list" tabindex="-1">ส่วนที่ 4 — หน้า Incident List</h1>
+<p><strong>ไฟล์ที่เกี่ยวข้อง:</strong> <code>lib/screens/list_screen.dart</code> + <code>lib/helpers/database_helper.dart</code></p>
+<h2 id="%5B4.1%E2%80%934.3%5D-%E0%B8%94%E0%B8%B6%E0%B8%87%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%81%E0%B8%B2%E0%B8%A3-join-%E0%B8%8A%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%AB%E0%B8%99%E0%B9%88%E0%B8%A7%E0%B8%A2-%2B-%E0%B8%8A%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%A0%E0%B8%97" tabindex="-1">[4.1–4.3] ดึงรายการ JOIN ชื่อหน่วย + ชื่อประเภท</h2>
+<p>อธิบาย: ใช้ SQL JOIN 3 ตารางเพื่อได้ <code>station_name</code> และ <code>type_name</code> แทน ID</p>
+<pre class="hljs"><code><div><span class="hljs-comment">// database_helper.dart — บรรทัด 128-137</span>
+Future&lt;<span class="hljs-built_in">List</span>&lt;<span class="hljs-built_in">Map</span>&lt;<span class="hljs-built_in">String</span>, <span class="hljs-built_in">dynamic</span>&gt;&gt;&gt; getAllReports() <span class="hljs-keyword">async</span> {
+  <span class="hljs-keyword">final</span> db = <span class="hljs-keyword">await</span> database;
+  <span class="hljs-keyword">return</span> db.rawQuery(<span class="hljs-string">'''
+    SELECT ir.*, ps.station_name, vt.type_name, vt.severity
+    FROM   incident_report ir
+    JOIN   polling_station ps ON ir.station_id = ps.station_id
+    JOIN   violation_type  vt ON ir.type_id    = vt.type_id
+    ORDER  BY ir.timestamp DESC
+  '''</span>);
+}
+
+<span class="hljs-comment">// list_screen.dart — บรรทัด 117-119 (แสดงบน UI)</span>
+Text(r[<span class="hljs-string">'station_name'</span>] ?? <span class="hljs-string">'-'</span>),  <span class="hljs-comment">// [4.2] ชื่อหน่วย</span>
+Text(r[<span class="hljs-string">'type_name'</span>] ?? <span class="hljs-string">'-'</span>),     <span class="hljs-comment">// [4.3] ชื่อประเภท</span>
+</div></code></pre>
+<h2 id="%5B4.4%5D-thumbnail-%E0%B8%88%E0%B8%B2%E0%B8%81-path" tabindex="-1">[4.4] Thumbnail จาก path</h2>
+<p>อธิบาย: ตรวจ <code>File(path).existsSync()</code> ก่อน ถ้ามีแสดง <code>Image.file()</code> ถ้าไม่มีแสดง icon placeholder</p>
+<pre class="hljs"><code><div><span class="hljs-comment">// list_screen.dart — บรรทัด 65-77</span>
+Widget _thumb(<span class="hljs-built_in">String?</span> path) {
+  <span class="hljs-keyword">if</span> (path == <span class="hljs-keyword">null</span> || path.isEmpty || !File(path).existsSync()) {
+    <span class="hljs-keyword">return</span> Container(width: <span class="hljs-number">56</span>, height: <span class="hljs-number">56</span>, color: Colors.grey.shade200,
+      child: <span class="hljs-keyword">const</span> Icon(Icons.image_not_supported));
+  }
+  <span class="hljs-keyword">return</span> ClipRRect(borderRadius: BorderRadius.circular(<span class="hljs-number">6</span>),
+    child: Image.file(File(path), width: <span class="hljs-number">56</span>, height: <span class="hljs-number">56</span>, fit: BoxFit.cover));
+}
+</div></code></pre>
+<h2 id="%5B4.5%E2%80%934.8%5D-%E0%B8%A5%E0%B8%9A-%2B-dialog-%2B-delete-%2B-setstate-%E0%B8%97%E0%B8%B1%E0%B8%99%E0%B8%97%E0%B8%B5" tabindex="-1">[4.5–4.8] ลบ + Dialog + DELETE + setState ทันที</h2>
+<p>อธิบาย: <code>IconButton(Icons.delete_outline)</code> → <code>showDialog</code> ยืนยัน → <code>_db.deleteReport(id)</code> → <code>setState(() =&gt; _reports.removeAt(index))</code></p>
+<pre class="hljs"><code><div><span class="hljs-comment">// list_screen.dart — บรรทัด 30-53</span>
+Future&lt;<span class="hljs-keyword">void</span>&gt; _deleteItem(<span class="hljs-built_in">int</span> index) <span class="hljs-keyword">async</span> {
+  <span class="hljs-keyword">final</span> id = _reports[index][<span class="hljs-string">'report_id'</span>] <span class="hljs-keyword">as</span> <span class="hljs-built_in">int</span>;
+  <span class="hljs-comment">// [4.6] Dialog ยืนยัน</span>
+  <span class="hljs-keyword">final</span> ok = <span class="hljs-keyword">await</span> showDialog&lt;<span class="hljs-built_in">bool</span>&gt;(
+    context: context,
+    builder: (ctx) =&gt; AlertDialog(
+      title: <span class="hljs-keyword">const</span> Text(<span class="hljs-string">'ยืนยันการลบ?'</span>),
+      content: <span class="hljs-keyword">const</span> Text(<span class="hljs-string">'ต้องการลบรายการนี้? ไม่สามารถกู้คืนได้'</span>),
+      actions: [
+        TextButton(onPressed: () =&gt; Navigator.pop(ctx, <span class="hljs-keyword">false</span>), child: <span class="hljs-keyword">const</span> Text(<span class="hljs-string">'ยกเลิก'</span>)),
+        TextButton(onPressed: () =&gt; Navigator.pop(ctx, <span class="hljs-keyword">true</span>),
+          style: TextButton.styleFrom(foregroundColor: Colors.red), child: <span class="hljs-keyword">const</span> Text(<span class="hljs-string">'ลบ'</span>)),
+      ],
+    ),
+  );
+  <span class="hljs-keyword">if</span> (ok == <span class="hljs-keyword">true</span>) {
+    <span class="hljs-keyword">await</span> _db.deleteReport(id);              <span class="hljs-comment">// [4.7] DELETE SQLite</span>
+    setState(() =&gt; _reports.removeAt(index)); <span class="hljs-comment">// [4.8] หายทันที</span>
+  }
+}
+
+<span class="hljs-comment">// list_screen.dart — บรรทัด 132-134 (ปุ่มลบ)</span>
+IconButton(
+  icon: <span class="hljs-keyword">const</span> Icon(Icons.delete_outline, color: Colors.red),
+  onPressed: () =&gt; _deleteItem(i),      <span class="hljs-comment">// [4.5]</span>
+),
+</div></code></pre>
+<hr>
+<h1 id="%E0%B8%AA%E0%B9%88%E0%B8%A7%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88-5-%E2%80%94-%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2-search-%26-filter" tabindex="-1">ส่วนที่ 5 — หน้า Search &amp; Filter</h1>
+<p><strong>ไฟล์ที่เกี่ยวข้อง:</strong> <code>lib/screens/filter_screen.dart</code> + <code>lib/helpers/database_helper.dart</code></p>
+<h2 id="%5B5.1%5D-textbox-%E0%B8%84%E0%B9%89%E0%B8%99%E0%B8%AB%E0%B8%B2" tabindex="-1">[5.1] Textbox ค้นหา</h2>
+<pre class="hljs"><code><div><span class="hljs-comment">// filter_screen.dart — บรรทัด 66-79</span>
+TextField(
+  controller: _searchCtrl,
+  decoration: InputDecoration(
+    labelText: <span class="hljs-string">'ค้นหาชื่อผู้แจ้ง / รายละเอียด'</span>,
+    border: <span class="hljs-keyword">const</span> OutlineInputBorder(),
+    prefixIcon: <span class="hljs-keyword">const</span> Icon(Icons.search),
+  ),
+  onSubmitted: (_) =&gt; _search(),
+),
+</div></code></pre>
+<h2 id="%5B5.2%E2%80%935.3%2C-5.5%2C-5.7%5D-combined-like-%2B-join-%2B-%E0%B8%9C%E0%B8%AA%E0%B8%A1%E0%B9%80%E0%B8%87%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%99%E0%B9%84%E0%B8%82" tabindex="-1">[5.2–5.3, 5.5, 5.7] Combined LIKE + JOIN + ผสมเงื่อนไข</h2>
+<p>อธิบาย: สร้าง SQL แบบ dynamic — ถ้ามี keyword เพิ่ม <code>AND (reporter_name LIKE ? OR description LIKE ?)</code> ถ้ามี severity เพิ่ม <code>AND vt.severity = ?</code> → ค้นหาผสมได้</p>
+<pre class="hljs"><code><div><span class="hljs-comment">// database_helper.dart — บรรทัด 147-167</span>
+Future&lt;<span class="hljs-built_in">List</span>&lt;<span class="hljs-built_in">Map</span>&lt;<span class="hljs-built_in">String</span>, <span class="hljs-built_in">dynamic</span>&gt;&gt;&gt; search(<span class="hljs-built_in">String</span> keyword, <span class="hljs-built_in">String?</span> severity) <span class="hljs-keyword">async</span> {
+  <span class="hljs-keyword">final</span> db = <span class="hljs-keyword">await</span> database;
+  <span class="hljs-keyword">final</span> params = &lt;<span class="hljs-built_in">dynamic</span>&gt;[];
+  <span class="hljs-built_in">String</span> sql = <span class="hljs-string">'''
+    SELECT ir.*, ps.station_name, vt.type_name, vt.severity
+    FROM   incident_report ir
+    JOIN   polling_station ps ON ir.station_id = ps.station_id
+    JOIN   violation_type  vt ON ir.type_id    = vt.type_id
+    WHERE  1=1
+  '''</span>;
+  <span class="hljs-keyword">if</span> (keyword.trim().isNotEmpty) {
+    sql += <span class="hljs-string">' AND (ir.reporter_name LIKE ? OR ir.description LIKE ?)'</span>;  <span class="hljs-comment">// [5.2+5.3]</span>
+    params.addAll([<span class="hljs-string">'%<span class="hljs-subst">${keyword.trim()}</span>%'</span>, <span class="hljs-string">'%<span class="hljs-subst">${keyword.trim()}</span>%'</span>]);
+  }
+  <span class="hljs-keyword">if</span> (severity != <span class="hljs-keyword">null</span>) {
+    sql += <span class="hljs-string">' AND vt.severity = ?'</span>;  <span class="hljs-comment">// [5.5] JOIN severity</span>
+    params.add(severity);
+  }
+  sql += <span class="hljs-string">' ORDER BY ir.timestamp DESC'</span>;
+  <span class="hljs-keyword">return</span> db.rawQuery(sql, params);
+}
+</div></code></pre>
+<h2 id="%5B5.4%5D-dropdown-severity" tabindex="-1">[5.4] Dropdown Severity</h2>
+<pre class="hljs"><code><div><span class="hljs-comment">// filter_screen.dart — บรรทัด 83-98</span>
+DropdownButtonFormField&lt;<span class="hljs-built_in">String</span>&gt;(
+  decoration: <span class="hljs-keyword">const</span> InputDecoration(
+    labelText: <span class="hljs-string">'กรองตามความรุนแรง (Severity)'</span>,
+    border: OutlineInputBorder(),
+  ),
+  value: _severity,
+  items: <span class="hljs-keyword">const</span> [
+    DropdownMenuItem(value: <span class="hljs-keyword">null</span>,     child: Text(<span class="hljs-string">'ทั้งหมด'</span>)),
+    DropdownMenuItem(value: <span class="hljs-string">'High'</span>,   child: Text(<span class="hljs-string">'High'</span>)),
+    DropdownMenuItem(value: <span class="hljs-string">'Medium'</span>, child: Text(<span class="hljs-string">'Medium'</span>)),
+    DropdownMenuItem(value: <span class="hljs-string">'Low'</span>,    child: Text(<span class="hljs-string">'Low'</span>)),
+  ],
+  onChanged: (v) =&gt; setState(() =&gt; _severity = v),
+),
+</div></code></pre>
+<h2 id="%5B5.6%5D-%E0%B9%81%E0%B8%AA%E0%B8%94%E0%B8%87%E0%B8%9C%E0%B8%A5%E0%B8%96%E0%B8%B9%E0%B8%81%E0%B8%95%E0%B9%89%E0%B8%AD%E0%B8%87-%2B-%5B5.8%5D-%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B8%9E%E0%B8%9A" tabindex="-1">[5.6] แสดงผลถูกต้อง + [5.8] ข้อความเมื่อไม่พบ</h2>
+<pre class="hljs"><code><div><span class="hljs-comment">// filter_screen.dart — บรรทัด 120-126 (ไม่พบข้อมูล)</span>
+: _results.isEmpty
+    ? <span class="hljs-keyword">const</span> Center(child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Icon(Icons.search_off, size: <span class="hljs-number">64</span>, color: Colors.grey),
+          SizedBox(height: <span class="hljs-number">8</span>),
+          Text(<span class="hljs-string">'ไม่พบข้อมูล (No records found)'</span>,
+               style: TextStyle(color: Colors.grey, fontSize: <span class="hljs-number">16</span>)),
+        ],
+      ))
+
+<span class="hljs-comment">// filter_screen.dart — บรรทัด 127-171 (แสดงผลลัพธ์)</span>
+    : Column(children: [
+        Container(
+          child: Text(<span class="hljs-string">'พบ <span class="hljs-subst">${_results.length}</span> รายการ'</span>),
+        ),
+        Expanded(child: ListView.builder(
+          itemCount: _results.length,
+          itemBuilder: (ctx, i) {
+            <span class="hljs-keyword">final</span> r = _results[i];
+            <span class="hljs-keyword">return</span> ListTile(
+              title: Text(r[<span class="hljs-string">'reporter_name'</span>] ?? <span class="hljs-string">'-'</span>),
+              subtitle: Text(r[<span class="hljs-string">'station_name'</span>] ?? <span class="hljs-string">'-'</span>),
+              trailing: Chip(label: Text(r[<span class="hljs-string">'severity'</span>] ?? <span class="hljs-string">'-'</span>)),
+            );
+          },
+        )),
+      ]),
+</div></code></pre>
+<hr>
+<h2 id="%E0%B9%82%E0%B8%84%E0%B9%89%E0%B8%94%E0%B8%97%E0%B8%B1%E0%B9%89%E0%B8%87%E0%B8%AB%E0%B8%A1%E0%B8%94-(%E0%B9%81%E0%B8%A2%E0%B8%81%E0%B9%84%E0%B8%9F%E0%B8%A5%E0%B9%8C)" tabindex="-1">โค้ดทั้งหมด (แยกไฟล์)</h2>
+<h3 id="lib%2Fmain.dart" tabindex="-1">lib/main.dart</h3>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> <span class="hljs-string">'package:flutter/material.dart'</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">'helpers/database_helper.dart'</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">'screens/home.dart'</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">'screens/report.dart'</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">'screens/edit_station.dart'</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">'screens/list_screen.dart'</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">'screens/filter_screen.dart'</span>;
+
+<span class="hljs-keyword">void</span> main() <span class="hljs-keyword">async</span> {
+  WidgetsFlutterBinding.ensureInitialized();
+  <span class="hljs-keyword">await</span> DatabaseHelper().database;
+  runApp(<span class="hljs-keyword">const</span> MyApp());
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyApp</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">StatelessWidget</span> </span>{
+  <span class="hljs-keyword">const</span> MyApp({<span class="hljs-keyword">super</span>.key});
+  <span class="hljs-meta">@override</span>
+  Widget build(BuildContext context) {
+    <span class="hljs-keyword">return</span> MaterialApp(
+      title: <span class="hljs-string">'Election Watch'</span>,
+      debugShowCheckedModeBanner: <span class="hljs-keyword">false</span>,
+      theme: ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigo), useMaterial3: <span class="hljs-keyword">true</span>),
+      initialRoute: <span class="hljs-string">'/'</span>,
+      routes: {
+        <span class="hljs-string">'/'</span>:       (ctx) =&gt; <span class="hljs-keyword">const</span> HomeScreen(),
+        <span class="hljs-string">'/report'</span>: (ctx) =&gt; <span class="hljs-keyword">const</span> ReportScreen(),
+        <span class="hljs-string">'/edit'</span>:   (ctx) =&gt; <span class="hljs-keyword">const</span> EditStationScreen(),
+        <span class="hljs-string">'/list'</span>:   (ctx) =&gt; <span class="hljs-keyword">const</span> ListScreen(),
+        <span class="hljs-string">'/filter'</span>: (ctx) =&gt; <span class="hljs-keyword">const</span> FilterScreen(),
+      },
+    );
+  }
+}
+</div></code></pre>
+
+    </div>
+
+
+</body></html>

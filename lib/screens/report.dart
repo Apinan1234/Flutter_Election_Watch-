@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import '../helpers/database_helper.dart';
 
 class ReportScreen extends StatefulWidget {
@@ -45,7 +46,7 @@ class _ReportScreenState extends State<ReportScreen> {
     }
   }
 
-  // [2.6] บันทึก SQLite
+  // [2.6] บันทึก SQLite + [2.7] Firebase
   Future<void> _save() async {
     if (!_formKey.currentState!.validate()) return;
     if (_selStation == null || _selType == null) {
@@ -70,18 +71,23 @@ class _ReportScreenState extends State<ReportScreen> {
       'ai_confidence':  _aiConf,
     });
 
-    // [2.7+2.8] Firebase — เปิดใช้เมื่อตั้งค่า Firebase แล้ว
-    // bool isUrl = _imagePath?.startsWith('http') ?? false;
-    // await FirebaseFirestore.instance.collection('incident_reports').add({
-    //   'station_id':    _selStation,
-    //   'type_id':       _selType,
-    //   'reporter_name': _nameCtrl.text.trim(),
-    //   'description':   _descCtrl.text.trim(),
-    //   'evidence_photo': isUrl ? _imagePath : 'OFFLINE_ONLY',
-    //   'timestamp':     ts,
-    //   'ai_result':     _aiLabel,
-    //   'ai_confidence': _aiConf,
-    // });
+    // [2.7] บันทึกแบบ Online — ส่งข้อมูลขึ้น Firebase Firestore
+    // [2.8] ถ้า evidence_photo เป็น path ในเครื่อง → ส่งเป็น "OFFLINE_ONLY"
+    try {
+      final bool isUrl = _imagePath?.startsWith('http') ?? false;
+      await FirebaseFirestore.instance.collection('incident_reports').add({
+        'station_id':     _selStation,
+        'type_id':        _selType,
+        'reporter_name':  _nameCtrl.text.trim(),
+        'description':    _descCtrl.text.trim(),
+        'evidence_photo': isUrl ? _imagePath : 'OFFLINE_ONLY',
+        'timestamp':      ts,
+        'ai_result':      _aiLabel,
+        'ai_confidence':  _aiConf,
+      });
+    } catch (e) {
+      debugPrint('Firebase save error: $e');
+    }
 
     if (mounted) {
       ScaffoldMessenger.of(context).showSnackBar(
